@@ -3,359 +3,128 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>ALD Leasefinanz — Google Ads Campaign Build</title>
+<title>ALD Leasefinanz — 1 Campaign / 1 Ad Group</title>
 <style>
-  :root { --bg:#0f1115; --card:#1a1d24; --line:#2a2f3a; --ink:#eef1f6; --mut:#9aa4b2; --grn:#2ecc71; --org:#ff9f43; --blu:#4aa3ff; --red:#ff6b6b; --prp:#b388ff; }
+  :root { --bg:#11131a; --card:#1a1e27; --line:#2a3040; --ink:#eef1f6; --mut:#94a0b4; --grn:#37d39a; --org:#ffb020; --blu:#5aa9ff; --red:#ff6b6b; }
   * { box-sizing:border-box; }
-  body { margin:0 auto; max-width:920px; background:var(--bg); color:var(--ink); font:18px/1.6 -apple-system,Segoe UI,Roboto,Arial,sans-serif; padding:24px; }
+  body { margin:0 auto; max-width:900px; background:var(--bg); color:var(--ink); font:18px/1.6 -apple-system,Segoe UI,Roboto,Arial,sans-serif; padding:24px; }
   h1 { font-size:30px; margin:0 0 4px; }
-  h2 { font-size:24px; margin:34px 0 8px; padding-bottom:6px; border-bottom:2px solid var(--line); }
-  h3 { font-size:17px; margin:16px 0 6px; color:var(--mut); }
+  h2 { font-size:23px; margin:32px 0 8px; padding-bottom:6px; border-bottom:2px solid var(--line); }
+  h3 { font-size:16px; margin:18px 0 6px; color:var(--mut); }
   .sub { color:var(--mut); margin:0 0 18px; }
   .card { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:18px 20px; margin:14px 0; }
-  .tag { display:inline-block; font-size:14px; font-weight:700; padding:3px 10px; border-radius:20px; margin-bottom:10px; background:rgba(255,159,67,.15); color:var(--org); }
-  .tag.b { background:rgba(74,163,255,.15); color:var(--blu); }
-  .tag.c { background:rgba(179,136,255,.15); color:var(--prp); }
-  pre { background:#0b0d11; border:1px solid var(--line); border-radius:8px; padding:14px; overflow:auto; font:15px/1.7 ui-monospace,Menlo,Consolas,monospace; color:#dbe2ec; margin:0; white-space:pre-wrap; }
+  .tag { display:inline-block; font-size:13px; font-weight:700; padding:4px 12px; border-radius:20px; margin-bottom:12px; background:rgba(255,176,32,.15); color:var(--org); }
+  .tag.g { background:rgba(55,211,154,.15); color:var(--grn); }
+  pre { background:#0c0e13; border:1px solid var(--line); border-radius:8px; padding:14px; overflow:auto; font:15px/1.7 ui-monospace,Menlo,Consolas,monospace; color:#dbe2ec; margin:0; white-space:pre-wrap; }
   .row { display:flex; justify-content:space-between; align-items:center; gap:12px; margin-bottom:8px; }
   .ttl { font-weight:700; font-size:18px; }
-  button { background:var(--grn); color:#04210f; border:0; border-radius:8px; padding:8px 15px; font-size:14px; font-weight:700; cursor:pointer; white-space:nowrap; }
+  button { background:var(--grn); color:#03210f; border:0; border-radius:8px; padding:8px 15px; font-size:14px; font-weight:700; cursor:pointer; white-space:nowrap; }
   button:active { transform:translateY(1px); }
   button.done { background:var(--blu); color:#04162b; }
-  .ok { background:rgba(46,204,113,.08); border-left:4px solid var(--grn); padding:14px 18px; border-radius:8px; margin:10px 0 20px; }
+  .ok { background:rgba(55,211,154,.08); border-left:4px solid var(--grn); padding:14px 18px; border-radius:8px; margin:10px 0 20px; }
   .ok b { color:var(--grn); }
+  .tip { background:rgba(90,169,255,.08); border-left:4px solid var(--blu); padding:14px 18px; border-radius:8px; margin:10px 0; color:#cdd9ea; font-size:15px; }
+  .tip b { color:var(--blu); }
   .note { color:var(--mut); font-size:14px; margin-top:8px; }
-  code { background:#0b0d11; padding:2px 7px; border-radius:5px; color:#ffd479; font-size:14px; }
-  .map { font:15px/1.8 ui-monospace,Menlo,Consolas,monospace; color:#cdd6e2; }
-  .map b { color:var(--ink); }
-  .pill { font-size:13px; color:var(--mut); }
+  code { background:#0c0e13; padding:2px 7px; border-radius:5px; color:#ffd479; font-size:14px; }
 </style>
 </head>
 <body>
-  <h1>ALD Leasefinanz — Campaign Build</h1>
-  <p class="sub">DE Financial Services · BaFin (Leasing/Factoring) · Final URL https://ald-leasefinanz.com.de/</p>
+  <h1>ALD Leasefinanz — Lean Launch</h1>
+  <p class="sub">1 Campaign · 1 Ad Group · high-intent + low-CPC broad starters · Final URL https://ald-leasefinanz.com.de/</p>
 
   <div class="ok">
-    <b>License lane:</b> everything stays inside <b>Leasing · Factoring · Business financing</b>. Wide on vehicle/equipment/deal size, narrow on product type. Tap <b>Copy</b> → paste into Google Ads.
+    <b>Goal:</b> get cheap traffic flowing from day one. High-intent keywords catch buyers; broad low-competition terms bring early volume at low CPC. Tap <b>Copy</b> → paste into Google Ads.
   </div>
 
-  <h2>Account structure (3 campaigns)</h2>
+  <h2>Campaign settings</h2>
   <div class="card">
-    <p class="map">
-<b>ACCOUNT</b> — Account-level: Callouts + Structured snippets<br>
-│<br>
-├─ <b style="color:#ff9f43">Campaign A · Auto- &amp; Fuhrpark-Leasing</b> <span class="pill">(highest volume)</span><br>
-│   ├─ AG1 Auto-Leasing (Gewerbe)<br>
-│   ├─ AG2 Fuhrpark-Leasing<br>
-│   └─ AG3 Transporter / Nutzfahrzeug-Leasing<br>
-│<br>
-├─ <b style="color:#4aa3ff">Campaign B · Maschinen, IT &amp; Anlagen</b> <span class="pill">(high ticket)</span><br>
-│   ├─ AG1 Maschinen-Leasing<br>
-│   ├─ AG2 IT-Leasing<br>
-│   └─ AG3 Sale-and-lease-back<br>
-│<br>
-└─ <b style="color:#b388ff">Campaign C · Factoring &amp; Firmenkredit</b> <span class="pill">(best margin)</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;├─ AG1 Factoring<br>
-&nbsp;&nbsp;&nbsp;&nbsp;└─ AG2 Firmenkredit
-    </p>
-    <h3>Settings — apply to ALL 3 campaigns</h3>
-    <div class="row"><span class="note">copy into each campaign</span><button onclick="cp(this,'set')">Copy settings</button></div>
-<pre id="set">Type:        Search
+    <div class="row"><span class="ttl">Campaign</span><button onclick="cp(this,'set')">Copy settings</button></div>
+<pre id="set">Name:        DE | Search | Leasing &amp; Finanzierung
+Type:        Search
 Networks:    Google Search ONLY (Search Partners OFF, Display OFF)
 Locations:   Germany — "Presence: people in your targeted locations"
 Language:    German
-Bidding:     Maximize conversions (→ Target CPA after ~30 conv)
-Ad rotation: Optimize
-Conversion:  Lead – Finanzierungsanfrage (form submit)
+Bidding:     Maximize conversions (no tCPA yet — let it learn)
+Budget:      [set daily €]
+Ad group:    Leasing &amp; Finanzierung (Gewerbe)
 Final URL:   https://ald-leasefinanz.com.de/</pre>
   </div>
 
-  <!-- CAMPAIGN A -->
-  <h2 style="color:#ff9f43">Campaign A · Auto- &amp; Fuhrpark-Leasing</h2>
+  <!-- KEYWORDS -->
+  <h2>Keywords <span style="font-size:14px;color:var(--mut)">— one ad group</span></h2>
 
   <div class="card">
-    <span class="tag">AG1 · Auto-Leasing (Gewerbe)</span>
-    <div class="row"><span class="ttl">Keywords</span><button onclick="cp(this,'a1k')">Copy keywords</button></div>
-<pre id="a1k">"auto leasing gewerbe"
-"gewerbe auto leasing"
+    <span class="tag">A · High-intent <span style="font-weight:500;opacity:.8">(phrase match — buyers)</span></span>
+    <div class="row"><span class="ttl">Copy as phrase match</span><button onclick="cp(this,'khi')">Copy keywords</button></div>
+<pre id="khi">"firmenleasing"
+"gewerbe leasing"
+"leasing für unternehmen"
+"maschinen leasing"
+"fuhrpark leasing"
 "firmenwagen leasing"
-"pkw leasing gewerbe"
-"geschäftswagen leasing"
-"dienstwagen leasing"
-"auto leasing für unternehmen"</pre>
+"it leasing"
+"factoring"
+"firmenkredit"
+"betriebsmittelkredit"</pre>
+    <div class="note">These convert. Higher CPC, but the money is here.</div>
+  </div>
+
+  <div class="card">
+    <span class="tag g">B · Low-competition broad starters <span style="font-weight:500;opacity:.8">(broad match — cheap traffic)</span></span>
+    <div class="row"><span class="ttl">Copy as broad match</span><button onclick="cp(this,'klo')">Copy keywords</button></div>
+<pre id="klo">leasing für firmen
+leasing ohne anzahlung gewerbe
+leasing für selbstständige
+leasing für handwerker
+leasing mittelstand
+betriebsausstattung leasen
+geschäftsausstattung finanzieren
+investition finanzieren firma
+anlagen finanzieren
+liquidität für unternehmen
+gewerbe finanzierung
+leasing rechner gewerbe</pre>
+    <div class="note">Longer-tail, low competition → low CPC. These fill the funnel in the first days.</div>
+  </div>
+
+  <div class="tip">
+    <b>How to use both:</b> put all keywords in the <b>same ad group</b>. Broad match only behaves with <b>Maximize conversions</b> bidding + the negatives below — that's what keeps the cheap clicks relevant instead of wasteful.
+  </div>
+
+  <!-- RSA -->
+  <h2>Responsive Search Ad</h2>
+  <div class="card">
+    <span class="tag">Leasing &amp; Finanzierung (Gewerbe)</span>
     <h3>Headlines (15 · ≤30)</h3>
-    <div class="row"><span class="note">paste into RSA</span><button onclick="cp(this,'a1h')">Copy headlines</button></div>
-<pre id="a1h">Gewerbe-Auto-Leasing
-Firmenwagen leasen
+    <div class="row"><span class="note">paste into RSA</span><button onclick="cp(this,'h')">Copy headlines</button></div>
+<pre id="h">Leasing &amp; Finanzierung
 ALD Leasefinanz
+Firmenleasing leicht gemacht
 Zusage in 48 Stunden
 BaFin-lizenziert
+Bankenunabhängig
 Bis 1 Mio. € Volumen
 Bilanzschonend leasen
-Full-Service möglich
-Flexible Laufzeiten
-Bankenunabhängig
+Eff. Jahreszins ab 4,2 %*
+Für Gewerbe &amp; Mittelstand
+Auch ohne Anzahlung möglich
 Kostenlos anfragen
-Faire Konditionen
-Dienstwagen leasen
-Pkw fürs Unternehmen
+Faire, transparente Raten
+Schnelle Erstindikation
 Jetzt Angebot sichern</pre>
     <h3>Descriptions (4 · ≤90)</h3>
-    <div class="row"><span class="note">paste into RSA</span><button onclick="cp(this,'a1d')">Copy descriptions</button></div>
-<pre id="a1d">Firmenwagen &amp; Dienstwagen flexibel leasen. BaFin-lizenziert. Zusage in 48 h.
-Bilanzschonend, bankenunabhängig, faire Konditionen. Jetzt kostenlos anfragen.
-ALD Leasefinanz – Auto-Leasing für Unternehmen aus einer Hand.
-Full-Service-Optionen &amp; flexible Laufzeiten. Unverbindliches Angebot sichern.</pre>
+    <div class="row"><span class="note">paste into RSA</span><button onclick="cp(this,'d')">Copy descriptions</button></div>
+<pre id="d">Leasing &amp; Finanzierung für Ihr Unternehmen – schnell, bankenunabhängig, fair.
+Fahrzeuge, Maschinen, IT &amp; mehr bilanzschonend leasen. Zusage in 48 Stunden.
+ALD Leasefinanz – BaFin-lizenziert. Bis 1 Mio. € Volumen. Jetzt kostenlos anfragen.
+Für Gewerbe, Mittelstand &amp; Selbstständige. Faire Raten. Unverbindlich anfragen.</pre>
   </div>
 
+  <!-- ASSETS -->
+  <h2>Assets</h2>
   <div class="card">
-    <span class="tag">AG2 · Fuhrpark-Leasing</span>
-    <div class="row"><span class="ttl">Keywords</span><button onclick="cp(this,'a2k')">Copy keywords</button></div>
-<pre id="a2k">"fuhrpark leasing"
-"fuhrparkmanagement"
-"flotten leasing"
-"fuhrpark finanzierung"
-"fleet leasing"
-"fuhrpark leasing unternehmen"</pre>
-    <h3>Headlines (15 · ≤30)</h3>
-    <div class="row"><span class="note">paste into RSA</span><button onclick="cp(this,'a2h')">Copy headlines</button></div>
-<pre id="a2h">Fuhrpark-Leasing
-Flotten-Leasing
-ALD Leasefinanz
-Ganzer Fuhrpark, 1 Partner
-Zusage in 48 Stunden
-BaFin-lizenziert
-Bis 1 Mio. € Volumen
-Fuhrparkmanagement
-Bilanzschonend leasen
-Bankenunabhängig
-Kostenlos anfragen
-Faire Konditionen
-Flexible Laufzeiten
-Full-Service Fuhrpark
-Jetzt Angebot sichern</pre>
-    <h3>Descriptions (4 · ≤90)</h3>
-    <div class="row"><span class="note">paste into RSA</span><button onclick="cp(this,'a2d')">Copy descriptions</button></div>
-<pre id="a2d">Ganze Fuhrparks effizient leasen &amp; managen. BaFin-lizenziert. Zusage in 48 h.
-Bilanzschonend &amp; bankenunabhängig. Full-Service-Fuhrparkmanagement möglich.
-ALD Leasefinanz – Ihr Partner für Flotten-Leasing. Jetzt kostenlos anfragen.
-Flexible Laufzeiten, faire Konditionen. Unverbindliches Angebot sichern.</pre>
-  </div>
-
-  <div class="card">
-    <span class="tag">AG3 · Transporter / Nutzfahrzeug-Leasing</span>
-    <div class="row"><span class="ttl">Keywords</span><button onclick="cp(this,'a3k')">Copy keywords</button></div>
-<pre id="a3k">"transporter leasing"
-"nutzfahrzeug leasing"
-"lkw leasing"
-"transporter leasing gewerbe"
-"nutzfahrzeuge leasing"
-"sprinter leasing"</pre>
-    <h3>Headlines (15 · ≤30)</h3>
-    <div class="row"><span class="note">paste into RSA</span><button onclick="cp(this,'a3h')">Copy headlines</button></div>
-<pre id="a3h">Transporter-Leasing
-Nutzfahrzeug-Leasing
-ALD Leasefinanz
-Lkw &amp; Transporter leasen
-Zusage in 48 Stunden
-BaFin-lizenziert
-Bis 1 Mio. € Volumen
-Bilanzschonend leasen
-Für Gewerbe &amp; Handwerk
-Bankenunabhängig
-Kostenlos anfragen
-Faire Konditionen
-Flexible Laufzeiten
-Sofort einsatzbereit
-Jetzt Angebot sichern</pre>
-    <h3>Descriptions (4 · ≤90)</h3>
-    <div class="row"><span class="note">paste into RSA</span><button onclick="cp(this,'a3d')">Copy descriptions</button></div>
-<pre id="a3d">Transporter, Sprinter &amp; Lkw fürs Gewerbe leasen. BaFin-lizenziert, 48 h Zusage.
-Bilanzschonend &amp; bankenunabhängig. Für Handwerk &amp; Gewerbe. Jetzt anfragen.
-ALD Leasefinanz – Nutzfahrzeug-Leasing flexibel &amp; fair. Kostenlos anfragen.
-Flexible Laufzeiten, schnelle Bereitstellung. Unverbindliches Angebot sichern.</pre>
-  </div>
-
-  <!-- CAMPAIGN B -->
-  <h2 style="color:#4aa3ff">Campaign B · Maschinen, IT &amp; Anlagen-Leasing</h2>
-
-  <div class="card">
-    <span class="tag b">AG1 · Maschinen-Leasing</span>
-    <div class="row"><span class="ttl">Keywords</span><button onclick="cp(this,'b1k')">Copy keywords</button></div>
-<pre id="b1k">"maschinen leasing"
-"maschinenfinanzierung"
-"anlagen leasing"
-"produktionsmaschinen leasing"
-"maschinen leasing gewerbe"
-"baumaschinen leasing"</pre>
-    <h3>Headlines (15 · ≤30)</h3>
-    <div class="row"><span class="note">paste into RSA</span><button onclick="cp(this,'b1h')">Copy headlines</button></div>
-<pre id="b1h">Maschinen-Leasing
-Anlagen-Leasing
-ALD Leasefinanz
-Maschinen bilanzneutral
-Zusage in 48 Stunden
-BaFin-lizenziert
-Bis 1 Mio. € Volumen
-Liquidität schonen
-Für Produktion &amp; Bau
-Bankenunabhängig
-Kostenlos anfragen
-Faire Konditionen
-Flexible Laufzeiten
-Sofort produktiv
-Jetzt Angebot sichern</pre>
-    <h3>Descriptions (4 · ≤90)</h3>
-    <div class="row"><span class="note">paste into RSA</span><button onclick="cp(this,'b1d')">Copy descriptions</button></div>
-<pre id="b1d">Produktions- &amp; Baumaschinen leasen, ohne Liquidität zu binden. 48 h Zusage.
-Bilanzschonend &amp; bankenunabhängig. BaFin-lizenziert. Jetzt kostenlos anfragen.
-ALD Leasefinanz – Maschinen- &amp; Anlagen-Leasing aus einer Hand.
-Flexible Laufzeiten, faire Konditionen. Unverbindliches Angebot sichern.</pre>
-  </div>
-
-  <div class="card">
-    <span class="tag b">AG2 · IT-Leasing</span>
-    <div class="row"><span class="ttl">Keywords</span><button onclick="cp(this,'b2k')">Copy keywords</button></div>
-<pre id="b2k">"it leasing"
-"hardware leasing"
-"it equipment leasing"
-"server leasing"
-"computer leasing gewerbe"
-"it leasing unternehmen"</pre>
-    <h3>Headlines (15 · ≤30)</h3>
-    <div class="row"><span class="note">paste into RSA</span><button onclick="cp(this,'b2h')">Copy headlines</button></div>
-<pre id="b2h">IT-Leasing
-Hardware-Leasing
-ALD Leasefinanz
-IT bilanzneutral nutzen
-Zusage in 48 Stunden
-BaFin-lizenziert
-Bis 1 Mio. € Volumen
-Server &amp; Hardware leasen
-Planbare Kosten
-Bankenunabhängig
-Kostenlos anfragen
-Faire Konditionen
-Flexible Laufzeiten
-Immer aktuelle Technik
-Jetzt Angebot sichern</pre>
-    <h3>Descriptions (4 · ≤90)</h3>
-    <div class="row"><span class="note">paste into RSA</span><button onclick="cp(this,'b2d')">Copy descriptions</button></div>
-<pre id="b2d">Hardware, Server &amp; IT-Infrastruktur bilanzneutral leasen. 48 h Zusage.
-Planbare Kosten, immer aktuelle Technik. BaFin-lizenziert. Jetzt anfragen.
-ALD Leasefinanz – IT- &amp; Equipment-Leasing für Unternehmen. Kostenlos anfragen.
-Flexible Laufzeiten, faire Konditionen. Unverbindliches Angebot sichern.</pre>
-  </div>
-
-  <div class="card">
-    <span class="tag b">AG3 · Sale-and-lease-back</span>
-    <div class="row"><span class="ttl">Keywords</span><button onclick="cp(this,'b3k')">Copy keywords</button></div>
-<pre id="b3k">"sale and lease back"
-"sale lease back"
-"sale-and-lease-back"
-"sale and lease back maschinen"
-"anlagen verkaufen und leasen"</pre>
-    <h3>Headlines (15 · ≤30)</h3>
-    <div class="row"><span class="note">paste into RSA</span><button onclick="cp(this,'b3h')">Copy headlines</button></div>
-<pre id="b3h">Sale-and-lease-back
-Liquidität freisetzen
-ALD Leasefinanz
-Anlagen verkaufen &amp; nutzen
-Zusage in 48 Stunden
-BaFin-lizenziert
-Bis 1 Mio. € Volumen
-Sofort liquide
-Bankenunabhängig
-Kostenlos anfragen
-Faire Konditionen
-Flexible Laufzeiten
-Bestand zu Kapital
-Planbare Raten
-Jetzt Angebot sichern</pre>
-    <h3>Descriptions (4 · ≤90)</h3>
-    <div class="row"><span class="note">paste into RSA</span><button onclick="cp(this,'b3d')">Copy descriptions</button></div>
-<pre id="b3d">Vorhandene Anlagen verkaufen &amp; weiternutzen – sofort Liquidität freisetzen.
-Bankenunabhängig, BaFin-lizenziert. Zusage in 48 h. Jetzt kostenlos anfragen.
-ALD Leasefinanz – Sale-and-lease-back für mehr Liquidität. Kostenlos anfragen.
-Planbare Raten, flexible Laufzeiten. Unverbindliches Angebot sichern.</pre>
-  </div>
-
-  <!-- CAMPAIGN C -->
-  <h2 style="color:#b388ff">Campaign C · Factoring &amp; Firmenkredit <span style="font-size:15px;color:var(--mut)">— best margin</span></h2>
-
-  <div class="card">
-    <span class="tag c">AG1 · Factoring</span>
-    <div class="row"><span class="ttl">Keywords</span><button onclick="cp(this,'c1k')">Copy keywords</button></div>
-<pre id="c1k">"factoring"
-"factoring anbieter"
-"factoring unternehmen"
-"rechnung verkaufen"
-"forderungen verkaufen"
-"online factoring"
-"factoring für kleine unternehmen"</pre>
-    <h3>Headlines (15 · ≤30)</h3>
-    <div class="row"><span class="note">paste into RSA</span><button onclick="cp(this,'c1h')">Copy headlines</button></div>
-<pre id="c1h">Factoring für Unternehmen
-Rechnungen sofort zu Geld
-ALD Leasefinanz
-Liquidität in 48 Stunden
-BaFin-lizenziert
-Bankenunabhängig
-Bis 1 Mio. € Volumen
-Sofort liquide bleiben
-Forderungen verkaufen
-Planbare Liquidität
-Kostenlos anfragen
-Faire Konditionen
-Für KMU &amp; Selbstständige
-Schnelle Auszahlung
-Jetzt Angebot sichern</pre>
-    <h3>Descriptions (4 · ≤90)</h3>
-    <div class="row"><span class="note">paste into RSA</span><button onclick="cp(this,'c1d')">Copy descriptions</button></div>
-<pre id="c1d">Offene Rechnungen sofort in Liquidität verwandeln. BaFin-lizenziert.
-Auszahlung in 48 Stunden, bankenunabhängig. Jetzt kostenlos anfragen.
-ALD Leasefinanz – Factoring für KMU &amp; Selbstständige. Faire Konditionen.
-Planbare Liquidität, sofort liquide bleiben. Unverbindliches Angebot sichern.</pre>
-  </div>
-
-  <div class="card">
-    <span class="tag c">AG2 · Firmenkredit</span>
-    <div class="row"><span class="ttl">Keywords</span><button onclick="cp(this,'c2k')">Copy keywords</button></div>
-<pre id="c2k">"firmenkredit"
-"betriebsmittelkredit"
-"gewerbekredit"
-"unternehmenskredit"
-"kredit für selbstständige"
-"investitionskredit"</pre>
-    <h3>Headlines (15 · ≤30)</h3>
-    <div class="row"><span class="note">paste into RSA</span><button onclick="cp(this,'c2h')">Copy headlines</button></div>
-<pre id="c2h">Firmenkredit schnell
-Betriebsmittelkredit
-ALD Leasefinanz
-Kredit für Unternehmen
-Liquidität in 48 Stunden
-BaFin-lizenziert
-Bis 1 Mio. € Volumen
-Bankenunabhängig
-Für Selbstständige &amp; KMU
-Investitionskredit
-Kostenlos anfragen
-Faire Konditionen
-Flexible Rückzahlung
-Schnelle Zusage
-Jetzt Angebot sichern</pre>
-    <h3>Descriptions (4 · ≤90)</h3>
-    <div class="row"><span class="note">paste into RSA</span><button onclick="cp(this,'c2d')">Copy descriptions</button></div>
-<pre id="c2d">Firmen-, Betriebsmittel- &amp; Investitionskredit für Unternehmen. 48 h Zusage.
-Bankenunabhängig, BaFin-lizenziert. Jetzt kostenlos anfragen.
-ALD Leasefinanz – Firmenkredit für Selbstständige &amp; KMU. Faire Konditionen.
-Flexible Rückzahlung ohne lange Wartezeit. Unverbindliches Angebot sichern.</pre>
-  </div>
-
-  <!-- SHARED -->
-  <h2>Account-level assets</h2>
-  <div class="card">
-    <div class="row"><span class="ttl">Callouts</span><button onclick="cp(this,'cal')">Copy</button></div>
+    <div class="row"><span class="ttl">Callouts <span class="note" style="display:inline">· Account level</span></span><button onclick="cp(this,'cal')">Copy</button></div>
 <pre id="cal">BaFin-lizenziert
 Bankenunabhängig
 Zusage in 48 Stunden
@@ -363,19 +132,26 @@ Bis 1 Mio. € Volumen
 Bilanzschonend
 Kostenlos &amp; unverbindlich
 Persönlicher Ansprechpartner</pre>
-    <h3>Structured snippet</h3>
-    <div class="row"><span class="note">Header: Dienstleistungen</span><button onclick="cp(this,'snip')">Copy</button></div>
-<pre id="snip">Auto-Leasing
-Fuhrpark-Leasing
+    <h3>Structured snippet · Header: Dienstleistungen</h3>
+    <div class="row"><span class="note">Account level</span><button onclick="cp(this,'snip')">Copy</button></div>
+<pre id="snip">Fuhrpark-Leasing
 Maschinen-Leasing
 IT-Leasing
 Factoring
-Firmenkredit</pre>
+Firmenkredit
+Sale-and-lease-back</pre>
+    <h3>Sitelinks · Campaign level</h3>
+    <div class="row"><span class="note">paste into sitelinks</span><button onclick="cp(this,'site')">Copy</button></div>
+<pre id="site">Leistungen | Fahrzeug, Maschine, IT &amp; mehr | https://ald-leasefinanz.com.de/#finanzieren
+Warum wir | Schneller als die Hausbank | https://ald-leasefinanz.com.de/#warum
+Konditionen | Eff. Zins &amp; Beispiel | https://ald-leasefinanz.com.de/#konditionen
+Anfrage | Erstindikation in 48 Stunden | https://ald-leasefinanz.com.de/#kontakt</pre>
   </div>
 
-  <h2>Negative keywords <span style="font-size:15px;color:var(--mut)">— one shared list</span></h2>
+  <!-- NEGATIVES -->
+  <h2>Negative keywords <span style="font-size:14px;color:var(--mut)">— essential with broad match</span></h2>
   <div class="card">
-    <div class="row"><span class="note">keeps out private &amp; off-license intent</span><button onclick="cp(this,'neg')">Copy negatives</button></div>
+    <div class="row"><span class="note">keeps broad match clean</span><button onclick="cp(this,'neg')">Copy negatives</button></div>
 <pre id="neg">privat
 privatleasing
 privatkunden
@@ -404,19 +180,20 @@ definition
 wikipedia
 was ist
 kostenlos
-student</pre>
+student
+gehalt</pre>
   </div>
 
-  <h2>Setup notes</h2>
+  <h2>Launch order</h2>
   <div class="card">
-    <pre>• Run A + B + C together; all sit inside the leasing/factoring license.
-• Conversion = Lead form submit. Fire only after cookie consent.
-• Every "ab 4,2 %" / amount claim is backed by the example on the page.
-• Target gewerbe/business intent — private buyers are in negatives.
-• Fill BaFin reg-no, address & phone in the LP/Impressum before launch.</pre>
+    <pre>1. Add settings → 1 campaign, 1 ad group.
+2. Paste keywords A (phrase) + B (broad) into that ad group.
+3. Paste the RSA, callouts, snippet, sitelinks.
+4. Add the negatives (critical — broad match needs them).
+5. Set conversion = Lead form submit, then go live.</pre>
   </div>
 
-  <p class="sub" style="margin-top:24px">Landing page: <a href="index.html" style="color:#4aa3ff">ald-leasefinanz.com.de</a> · * eff. Jahreszins ab 4,2 % bonitätsabhängig, gedeckt durch das repräsentative Beispiel auf der Seite.</p>
+  <p class="sub" style="margin-top:22px">Landing page: <a href="index.html" style="color:#5aa9ff">ald-leasefinanz.com.de</a> · * eff. Jahreszins ab 4,2 % bonitätsabhängig, gedeckt durch das Beispiel auf der Seite.</p>
 
 <script>
 function cp(btn, id){

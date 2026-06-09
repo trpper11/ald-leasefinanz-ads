@@ -3,209 +3,265 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Leasing &amp; Finanzierung für Unternehmen | ALD Leasefinanz</title>
-<meta name="description" content="BaFin-lizenzierte Leasing- und Finanzierungslösungen für Unternehmen: Auto- & Fuhrpark-Leasing, Maschinen- & IT-Leasing, Factoring und Firmenkredit. Zusage in 48 Stunden.">
+<title>ALD Leasefinanz — Leasing &amp; Finanzierung für Unternehmen</title>
+<meta name="description" content="ALD Leasefinanz: BaFin-lizenzierte Leasing- und Finanzierungslösungen für Gewerbe und Mittelstand. Fahrzeuge, Maschinen, IT, Factoring und Firmenkredit – schnell, bankenunabhängig, fair.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 <style>
-:root{--ink:#10212e;--green:#0f7b6c;--green2:#0a5c50;--accent:#13c2a3;--bg:#f2f9f7;--line:#d6e6e1;--warn:#0f7b6c}
+:root{
+  --bg:#15171c; --surface:#1d2027; --surface2:#23272f; --line:#2e333d;
+  --amber:#ffb020; --amber-d:#e89a07; --mint:#2bd9a0;
+  --txt:#eef1f6; --muted:#9aa3b2; --head:'Space Grotesk',sans-serif; --body:'Inter',sans-serif;
+}
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Poppins','Segoe UI',Helvetica,Arial,sans-serif;color:var(--ink);line-height:1.6;background:#fff}
-a{color:var(--green);text-decoration:none}
-.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
-header{border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(255,255,255,.96);backdrop-filter:blur(6px);z-index:20}
-.bar{display:flex;align-items:center;justify-content:space-between;height:70px}
-.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:19px;color:var(--ink)}
-.logo .mark{width:38px;height:38px;border-radius:10px;background:linear-gradient(135deg,var(--green),var(--accent));display:grid;place-items:center;color:#fff;font-weight:800;font-size:15px}
-nav a{margin-left:22px;color:var(--ink);font-weight:600;font-size:15px}
-.btn{display:inline-block;background:var(--green);color:#fff;font-weight:700;padding:13px 24px;border-radius:9px;border:0;cursor:pointer;font-size:16px}
-.btn:hover{background:var(--green2)}
-.btn.ghost{background:#fff;color:var(--green);border:1px solid var(--green)}
-.hero{background:linear-gradient(160deg,#e6f6f2,#f2f9f7);padding:66px 0 56px}
-.hero h1{font-size:42px;line-height:1.15;letter-spacing:-.5px;max-width:780px}
-.hero p.lead{font-size:19px;color:#3a5a52;margin:18px 0 28px;max-width:660px}
-.cta-row{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
-.trust{display:flex;gap:26px;flex-wrap:wrap;margin-top:30px;font-size:14px;color:#3a5a52}
-.trust b{color:var(--ink)}
-.trust i{color:var(--green);margin-right:6px}
-section{padding:54px 0}
-h2{font-size:30px;letter-spacing:-.3px;margin-bottom:8px}
-.sub{color:#557b72;margin-bottom:30px;max-width:660px}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.card{border:1px solid var(--line);border-radius:14px;padding:24px;background:#fff;transition:.15s}
-.card:hover{box-shadow:0 8px 26px rgba(15,123,108,.12);transform:translateY(-2px)}
-.card .ic{width:46px;height:46px;border-radius:11px;background:#e0f4ef;color:var(--green);display:grid;place-items:center;font-size:22px;margin-bottom:14px}
-.card h3{font-size:18px;margin-bottom:6px}
-.card p{color:#557b72;font-size:15px}
-.steps{background:var(--bg)}
-.stepgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;counter-reset:s}
-.step{position:relative;padding:22px;background:#fff;border:1px solid var(--line);border-radius:14px}
-.step:before{counter-increment:s;content:counter(s);position:absolute;top:-16px;left:22px;width:34px;height:34px;border-radius:50%;background:var(--green);color:#fff;font-weight:800;display:grid;place-items:center}
-.step h3{font-size:17px;margin:12px 0 6px}
-.step p{color:#557b72;font-size:14px}
-.example{border:1px solid var(--line);border-left:4px solid var(--green);border-radius:12px;padding:22px 24px;background:#fbfefd;font-size:15px;color:#3a5a52}
-.example b{color:var(--ink)}
-.formwrap{background:linear-gradient(160deg,#0f7b6c,#0a5c50);border-radius:18px;padding:42px;color:#fff;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
-.formwrap h2{color:#fff}
-.formwrap ul{list-style:none;margin-top:16px}
-.formwrap li{padding:7px 0 7px 30px;position:relative}
-.formwrap li i{position:absolute;left:0;color:#7ee8cf}
-.form{background:#fff;border-radius:14px;padding:26px;color:var(--ink)}
-.form label{display:block;font-size:13px;font-weight:600;margin:12px 0 5px}
-.form input,.form select{width:100%;padding:11px 13px;border:1px solid var(--line);border-radius:8px;font-size:15px;font-family:inherit}
-.form .btn{width:100%;margin-top:18px}
-.disc{font-size:12px;color:#8aa8a0;margin-top:12px;line-height:1.5}
-.formwrap .disc{color:#cdeee7}
-.regbar{border:1px solid var(--line);border-radius:12px;padding:18px 22px;background:#fbfefd;display:flex;gap:16px;align-items:center;font-size:14px;color:#456}
-.regbar .badge{background:#e0f4ef;color:var(--green2);font-weight:700;padding:6px 12px;border-radius:8px;white-space:nowrap}
-footer{background:#10212e;color:#a8c2bb;padding:46px 0 30px;font-size:14px}
-footer h4{color:#fff;font-size:15px;margin-bottom:12px}
-footer a{color:#a8c2bb;display:block;margin-bottom:7px}
-footer a:hover{color:#fff}
-.fgrid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:30px;margin-bottom:26px}
-.copy{border-top:1px solid #243; padding-top:18px;font-size:13px;color:#7e9a93}
-@media(max-width:820px){.grid,.stepgrid{grid-template-columns:1fr}.formwrap{grid-template-columns:1fr;padding:28px}.hero h1{font-size:32px}nav{display:none}.fgrid{grid-template-columns:1fr}}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);background:var(--bg);color:var(--txt);line-height:1.65}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1140px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:var(--head);font-weight:700;line-height:1.12;letter-spacing:-.02em}
+.amber{color:var(--amber)}
+
+/* top utility bar */
+.utility{background:#0f1115;font-size:13px;color:var(--muted);border-bottom:1px solid var(--line)}
+.utility .wrap{display:flex;justify-content:space-between;align-items:center;height:38px;flex-wrap:wrap}
+.utility i{color:var(--amber);margin-right:6px}
+.utility span{margin-right:20px}
+
+/* header */
+header{position:sticky;top:0;z-index:30;background:rgba(21,23,28,.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:74px}
+.brand{display:flex;align-items:center;gap:12px;font-family:var(--head);font-weight:700;font-size:20px}
+.brand .logo{width:42px;height:42px;border-radius:12px;background:var(--amber);color:#15171c;display:grid;place-items:center;font-weight:700;font-size:15px;box-shadow:0 6px 18px rgba(255,176,32,.3)}
+.menu{display:flex;gap:30px;font-size:15px;color:var(--muted);font-weight:500}
+.menu a:hover{color:var(--txt)}
+.cta{display:inline-flex;align-items:center;gap:8px;background:var(--amber);color:#15171c;font-weight:600;padding:12px 22px;border-radius:10px;font-family:var(--head);font-size:15px;transition:.15s;border:0;cursor:pointer}
+.cta:hover{background:var(--amber-d);transform:translateY(-1px)}
+.cta.outline{background:transparent;color:var(--amber);border:1.5px solid var(--amber)}
+.cta.outline:hover{background:rgba(255,176,32,.1)}
+
+/* hero */
+.hero{position:relative;overflow:hidden;padding:90px 0 80px}
+.hero:before{content:"";position:absolute;top:-200px;right:-200px;width:600px;height:600px;background:radial-gradient(circle,rgba(255,176,32,.16),transparent 70%);pointer-events:none}
+.hero:after{content:"";position:absolute;bottom:-260px;left:-160px;width:520px;height:520px;background:radial-gradient(circle,rgba(43,217,160,.10),transparent 70%);pointer-events:none}
+.hero .wrap{position:relative;z-index:2}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;background:var(--surface);border:1px solid var(--line);color:var(--amber);font-size:13px;font-weight:600;padding:7px 14px;border-radius:30px;margin-bottom:24px}
+.hero h1{font-size:54px;max-width:880px}
+.hero p{font-size:20px;color:var(--muted);max-width:620px;margin:22px 0 34px}
+.hero-actions{display:flex;gap:16px;flex-wrap:wrap;align-items:center}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:16px;overflow:hidden;margin-top:60px}
+.kpi{background:var(--surface);padding:26px 24px}
+.kpi .n{font-family:var(--head);font-size:32px;font-weight:700;color:var(--amber)}
+.kpi .l{font-size:14px;color:var(--muted);margin-top:4px}
+
+/* section base */
+section{padding:80px 0}
+.lead-tag{color:var(--mint);font-family:var(--head);font-weight:600;font-size:14px;letter-spacing:.08em;text-transform:uppercase}
+.sec-title{font-size:38px;margin:10px 0 14px;max-width:680px}
+.sec-sub{color:var(--muted);font-size:18px;max-width:620px;margin-bottom:46px}
+
+/* finance list (two-column rows, NOT cards) */
+.flist{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.fitem{display:flex;gap:18px;padding:26px;background:var(--surface);border:1px solid var(--line);border-radius:16px;transition:.18s}
+.fitem:hover{border-color:var(--amber);background:var(--surface2)}
+.fitem .fi{flex:none;width:52px;height:52px;border-radius:13px;background:rgba(255,176,32,.12);color:var(--amber);display:grid;place-items:center;font-size:23px}
+.fitem h3{font-size:19px;margin-bottom:5px}
+.fitem p{color:var(--muted);font-size:15px}
+
+/* why — numbered */
+.why{background:var(--surface)}
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:44px}
+.why-item{padding-top:18px;border-top:2px solid var(--amber)}
+.why-item .num{font-family:var(--head);font-size:15px;color:var(--amber);font-weight:700}
+.why-item h3{font-size:21px;margin:10px 0 8px}
+.why-item p{color:var(--muted);font-size:15px}
+
+/* steps strip */
+.strip{background:linear-gradient(100deg,var(--amber),#ffd06b);color:#15171c}
+.strip .wrap{display:flex;align-items:center;justify-content:space-between;gap:30px;flex-wrap:wrap}
+.strip h2{font-size:30px;max-width:520px}
+.strip .cta{background:#15171c;color:var(--amber)}
+.strip .cta:hover{background:#000}
+
+/* conditions */
+.cond{border:1px solid var(--line);border-left:4px solid var(--mint);border-radius:14px;padding:26px 28px;background:var(--surface);color:var(--muted);font-size:15px;max-width:840px}
+.cond b{color:var(--txt)}
+
+/* contact */
+.contact{background:var(--surface)}
+.cgrid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:start}
+.cinfo h2{font-size:34px;margin-bottom:14px}
+.cinfo p{color:var(--muted);margin-bottom:26px;max-width:420px}
+.cline{display:flex;align-items:center;gap:14px;margin-bottom:16px;font-size:16px}
+.cline i{width:44px;height:44px;border-radius:12px;background:rgba(43,217,160,.12);color:var(--mint);display:grid;place-items:center;font-size:19px;flex:none}
+.cline b{display:block;font-family:var(--head)}
+.cline small{color:var(--muted)}
+form{background:var(--bg);border:1px solid var(--line);border-radius:18px;padding:30px}
+form label{display:block;font-size:13px;color:var(--muted);font-weight:500;margin:14px 0 6px}
+form input,form select{width:100%;padding:13px 15px;background:var(--surface2);border:1px solid var(--line);border-radius:10px;color:var(--txt);font-size:15px;font-family:inherit}
+form input:focus,form select:focus{outline:none;border-color:var(--amber)}
+form .cta{width:100%;justify-content:center;margin-top:20px}
+.fineprint{font-size:12px;color:var(--muted);margin-top:14px;line-height:1.5}
+.fineprint a{color:var(--amber)}
+
+/* bafin bar */
+.bafin{background:var(--bg);border-top:1px solid var(--line)}
+.bafin .wrap{display:flex;gap:18px;align-items:center;padding:24px;font-size:14px;color:var(--muted)}
+.bafin .chip{flex:none;background:rgba(43,217,160,.12);color:var(--mint);font-family:var(--head);font-weight:600;padding:8px 14px;border-radius:10px}
+
+/* footer */
+footer{background:#0f1115;color:var(--muted);padding:56px 0 30px;font-size:14px}
+.fgrid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px;margin-bottom:34px}
+footer h4{color:var(--txt);font-family:var(--head);font-size:15px;margin-bottom:14px}
+footer a{display:block;margin-bottom:9px;color:var(--muted)}
+footer a:hover{color:var(--amber)}
+.fbtm{border-top:1px solid var(--line);padding-top:20px;font-size:12.5px;color:#6b7480}
+
+@media(max-width:880px){
+  .menu{display:none}
+  .hero h1{font-size:38px}.sec-title{font-size:30px}
+  .kpis{grid-template-columns:repeat(2,1fr)}
+  .flist,.why-grid,.cgrid,.fgrid{grid-template-columns:1fr}
+}
 </style>
 </head>
 <body>
 
-<header>
-  <div class="wrap bar">
-    <a class="logo" href="/"><span class="mark">ALD</span> ALD Leasefinanz</a>
-    <nav>
-      <a href="#leistungen">Leistungen</a>
-      <a href="#ablauf">Ablauf</a>
-      <a href="#beispiel">Konditionen</a>
-      <a href="#anfrage">Anfrage</a>
-    </nav>
-    <a class="btn" href="#anfrage">Jetzt anfragen</a>
-  </div>
-</header>
+<!-- utility -->
+<div class="utility"><div class="wrap">
+  <div><span><i class="fa-solid fa-shield-halved"></i>BaFin-lizenziert (§ 32 KWG)</span><span><i class="fa-solid fa-handshake"></i>Bankenunabhängig</span></div>
+  <div><span><i class="fa-solid fa-phone"></i>[Telefonnummer einsetzen]</span></div>
+</div></div>
 
-<section class="hero">
-  <div class="wrap">
-    <h1>Leasing &amp; Finanzierung für Ihr Unternehmen – Zusage in 48 Stunden</h1>
-    <p class="lead">Auto- &amp; Fuhrpark-Leasing, Maschinen- und IT-Leasing, Factoring und Firmenkredit aus einer Hand. BaFin-lizenziert, bankenunabhängig und mit fairen, transparenten Konditionen.</p>
-    <div class="cta-row">
-      <a class="btn" href="#anfrage">In 48 Stunden zur Zusage →</a>
-      <a class="btn ghost" href="#leistungen">Leistungen ansehen</a>
-    </div>
-    <div class="trust">
-      <span><i class="fa-solid fa-shield-halved"></i><b>BaFin-lizenziert</b></span>
-      <span><i class="fa-solid fa-percent"></i><b>4,2 %</b> eff. Jahreszins ab*</span>
-      <span><i class="fa-solid fa-euro-sign"></i><b>bis 1 Mio. €</b> Volumen</span>
-      <span><i class="fa-solid fa-bolt"></i><b>48 h</b> Erstindikation</span>
-    </div>
-  </div>
-</section>
+<!-- header -->
+<header><div class="wrap nav">
+  <a class="brand" href="/"><span class="logo">ALD</span> Leasefinanz</a>
+  <nav class="menu">
+    <a href="#finanzieren">Finanzieren</a>
+    <a href="#warum">Warum wir</a>
+    <a href="#konditionen">Konditionen</a>
+    <a href="#kontakt">Kontakt</a>
+  </nav>
+  <a class="cta" href="#kontakt"><i class="fa-solid fa-bolt"></i> Angebot anfragen</a>
+</div></header>
 
-<section id="leistungen">
-  <div class="wrap">
-    <h2>Unsere Leasing- &amp; Finanzlösungen</h2>
-    <p class="sub">Bilanzschonend, flexibel und bankenunabhängig – für Unternehmen, Gewerbe und Selbstständige.</p>
-    <div class="grid">
-      <div class="card"><div class="ic"><i class="fa-solid fa-car"></i></div><h3>Auto- &amp; Fuhrpark-Leasing</h3><p>Pkw, Transporter und ganze Fuhrparks flexibel leasen – inklusive Full-Service-Optionen.</p></div>
-      <div class="card"><div class="ic"><i class="fa-solid fa-gears"></i></div><h3>Maschinen- &amp; Anlagen-Leasing</h3><p>Produktions- und Betriebsanlagen finanzieren, ohne Liquidität zu binden.</p></div>
-      <div class="card"><div class="ic"><i class="fa-solid fa-laptop"></i></div><h3>IT- &amp; Equipment-Leasing</h3><p>Hardware, Server und IT-Infrastruktur planbar und bilanzneutral nutzen.</p></div>
-      <div class="card"><div class="ic"><i class="fa-solid fa-file-invoice-dollar"></i></div><h3>Factoring</h3><p>Offene Rechnungen sofort in Liquidität verwandeln – planbar und bankenunabhängig.</p></div>
-      <div class="card"><div class="ic"><i class="fa-solid fa-building-columns"></i></div><h3>Firmenkredit</h3><p>Betriebsmittel- und Investitionskredite für Wachstum und laufenden Bedarf.</p></div>
-      <div class="card"><div class="ic"><i class="fa-solid fa-rotate"></i></div><h3>Sale-and-lease-back</h3><p>Vorhandene Anlagen verkaufen und weiternutzen – Liquidität sofort freisetzen.</p></div>
-    </div>
+<!-- hero -->
+<section class="hero"><div class="wrap">
+  <span class="eyebrow"><i class="fa-solid fa-star"></i> Leasing &amp; Finanzierung für den Mittelstand</span>
+  <h1>Investieren Sie heute. <span class="amber">Zahlen Sie clever.</span></h1>
+  <p>Vom Firmenwagen bis zur Produktionsanlage – ALD Leasefinanz bringt Ihrem Unternehmen die passende Leasing- und Finanzierungslösung. Schnell entschieden, bankenunabhängig, planbar.</p>
+  <div class="hero-actions">
+    <a class="cta" href="#kontakt"><i class="fa-solid fa-bolt"></i> In 48 Stunden zur Zusage</a>
+    <a class="cta outline" href="#finanzieren">Was wir finanzieren</a>
   </div>
-</section>
+  <div class="kpis">
+    <div class="kpi"><div class="n">48 h</div><div class="l">bis zur Erstindikation</div></div>
+    <div class="kpi"><div class="n">1 Mio. €</div><div class="l">max. Finanzierungsvolumen</div></div>
+    <div class="kpi"><div class="n">ab 4,2 %</div><div class="l">eff. Jahreszins*</div></div>
+    <div class="kpi"><div class="n">100 %</div><div class="l">bankenunabhängig</div></div>
+  </div>
+</div></section>
 
-<section id="ablauf" class="steps">
-  <div class="wrap">
-    <h2>In vier Schritten zur Finanzierung</h2>
-    <p class="sub">Transparent, digital und ohne versteckte Kosten.</p>
-    <div class="stepgrid">
-      <div class="step"><h3>Anfrage</h3><p>Bedarf in 2 Minuten unverbindlich online schildern.</p></div>
-      <div class="step"><h3>Erstindikation</h3><p>Wir prüfen und melden uns innerhalb von 48 Stunden.</p></div>
-      <div class="step"><h3>Angebot</h3><p>Sie erhalten ein individuelles, BaFin-konformes Angebot.</p></div>
-      <div class="step"><h3>Auszahlung</h3><p>Nach Annahme erfolgt die Bereitstellung der Finanzierung.</p></div>
-    </div>
+<!-- finanzieren -->
+<section id="finanzieren"><div class="wrap">
+  <span class="lead-tag">Unser Spektrum</span>
+  <h2 class="sec-title">Alles, was Ihr Betrieb zum Wachsen braucht</h2>
+  <p class="sec-sub">Eine Anfrage, ein Ansprechpartner – sechs Wege, Ihre Investition bilanzschonend zu stemmen.</p>
+  <div class="flist">
+    <div class="fitem"><div class="fi"><i class="fa-solid fa-car-side"></i></div><div><h3>Fahrzeug- &amp; Fuhrpark-Leasing</h3><p>Pkw, Transporter und komplette Flotten – inklusive optionalem Full-Service.</p></div></div>
+    <div class="fitem"><div class="fi"><i class="fa-solid fa-industry"></i></div><div><h3>Maschinen &amp; Anlagen</h3><p>Produktions- und Betriebstechnik finanzieren, ohne Kapital zu binden.</p></div></div>
+    <div class="fitem"><div class="fi"><i class="fa-solid fa-server"></i></div><div><h3>IT &amp; Equipment</h3><p>Hardware, Server und Software-Setups planbar und bilanzneutral nutzen.</p></div></div>
+    <div class="fitem"><div class="fi"><i class="fa-solid fa-file-invoice-dollar"></i></div><div><h3>Factoring</h3><p>Offene Rechnungen sofort zu Liquidität machen – ohne Wartezeit.</p></div></div>
+    <div class="fitem"><div class="fi"><i class="fa-solid fa-sack-dollar"></i></div><div><h3>Firmenkredit</h3><p>Betriebsmittel- und Investitionskredite für jede Wachstumsphase.</p></div></div>
+    <div class="fitem"><div class="fi"><i class="fa-solid fa-arrows-rotate"></i></div><div><h3>Sale-and-lease-back</h3><p>Bestehende Anlagen verkaufen, weiternutzen und Liquidität freisetzen.</p></div></div>
   </div>
-</section>
+</div></section>
 
-<section id="beispiel">
-  <div class="wrap">
-    <h2>Konditionen &amp; repräsentatives Beispiel</h2>
-    <p class="sub">Den effektiven Jahreszins weisen wir gemäß den gesetzlichen Vorgaben transparent aus.</p>
-    <div class="example">
-      <p><b>Repräsentatives Beispiel (§ 6a PAngV):</b> Nettodarlehensbetrag 100.000 €, Laufzeit 72 Monate, gebundener Sollzins <b>3,90 % p. a.</b>, <b>effektiver Jahreszins 4,20 %</b>, 72 monatliche Raten à 1.561,52 €, Gesamtbetrag 112.429,44 €.</p>
-      <p style="margin-top:12px">*Eff. Jahreszins ab 4,20 % bonitätsabhängig, abhängig von Bonität, Laufzeit und Objekt/Sicherheiten. Unverbindliche Information, kein verbindliches Angebot. Vermittlung über BaFin-lizenzierte Partnerinstitute.</p>
-    </div>
+<!-- warum -->
+<section id="warum" class="why"><div class="wrap">
+  <span class="lead-tag">Warum ALD Leasefinanz</span>
+  <h2 class="sec-title">Der Vorsprung gegenüber der Hausbank</h2>
+  <div class="why-grid">
+    <div class="why-item"><div class="num">01</div><h3>Tempo statt Warteschleife</h3><p>Erstindikation in 48 Stunden statt wochenlanger Bankprüfung.</p></div>
+    <div class="why-item"><div class="num">02</div><h3>Unabhängig &amp; flexibel</h3><p>Wir sind an keine einzelne Bank gebunden – und finden so die bessere Kondition.</p></div>
+    <div class="why-item"><div class="num">03</div><h3>Reguliert &amp; sicher</h3><p>BaFin-lizenziert nach § 32 KWG. Transparente Konditionen, kein Kleingedrucktes.</p></div>
   </div>
-</section>
+</div></section>
 
-<section id="anfrage">
-  <div class="wrap">
-    <div class="formwrap">
-      <div>
-        <h2>Jetzt unverbindlich anfragen</h2>
-        <p style="color:#d6f3ec;margin-top:8px">Kostenlos, unverbindlich und ohne Auswirkung auf Ihren SCHUFA-Score.</p>
-        <ul>
-          <li><i class="fa-solid fa-check"></i>Leasing &amp; Finanzierung aus einer Hand</li>
-          <li><i class="fa-solid fa-check"></i>Persönlicher Ansprechpartner</li>
-          <li><i class="fa-solid fa-check"></i>BaFin-lizenziert &amp; bankenunabhängig</li>
-          <li><i class="fa-solid fa-check"></i>Erstindikation innerhalb von 48 Stunden</li>
-        </ul>
-      </div>
-      <form class="form" onsubmit="alert('Vielen Dank! Wir melden uns innerhalb von 48 Stunden.');return false;">
-        <label>Leistung</label>
-        <select required><option value="">Bitte wählen</option><option>Auto-/Fuhrpark-Leasing</option><option>Maschinen-/Anlagen-Leasing</option><option>IT-/Equipment-Leasing</option><option>Factoring</option><option>Firmenkredit</option></select>
-        <label>Volumen</label>
-        <select required><option value="">Bitte wählen</option><option>bis 50.000 €</option><option>50.000 – 250.000 €</option><option>250.000 – 1 Mio. €</option><option>über 1 Mio. €</option></select>
-        <label>Name</label>
-        <input type="text" required placeholder="Vor- und Nachname">
-        <label>E-Mail</label>
-        <input type="email" required placeholder="name@firma.de">
-        <label>Telefon</label>
-        <input type="tel" required placeholder="+49 ...">
-        <button class="btn" type="submit">Kostenlose Erstindikation anfordern</button>
-        <p class="disc">Mit dem Absenden stimmen Sie der Verarbeitung Ihrer Daten gemäß unserer <a href="datenschutz.html">Datenschutzerklärung</a> zu. Ihre Angaben werden vertraulich behandelt.</p>
-      </form>
-    </div>
-  </div>
-</section>
+<!-- strip -->
+<section class="strip"><div class="wrap">
+  <h2>Bereit zu investieren? Holen Sie sich Ihre unverbindliche Erstindikation.</h2>
+  <a class="cta" href="#kontakt"><i class="fa-solid fa-arrow-right"></i> Jetzt anfragen</a>
+</div></section>
 
-<section style="padding-top:0">
-  <div class="wrap">
-    <div class="regbar">
-      <span class="badge">BaFin-Lizenz</span>
-      <span>ALD Leasefinanz ist als Finanzdienstleistungsinstitut (Leasing/Factoring) gemäß § 32 KWG zugelassen und untersteht der Aufsicht der Bundesanstalt für Finanzdienstleistungsaufsicht (BaFin), Registernummer&nbsp;<b>[BaFin-Reg.-Nr. einsetzen]</b>. Anschrift des Anbieters: <b>[Straße, PLZ Ort einsetzen]</b>.</span>
-    </div>
+<!-- konditionen -->
+<section id="konditionen"><div class="wrap">
+  <span class="lead-tag">Transparenz</span>
+  <h2 class="sec-title">Konditionen &amp; repräsentatives Beispiel</h2>
+  <p class="sec-sub">Den effektiven Jahreszins weisen wir gemäß den gesetzlichen Vorgaben offen aus.</p>
+  <div class="cond">
+    <p><b>Repräsentatives Beispiel (§ 6a PAngV):</b> Nettodarlehensbetrag 100.000 €, Laufzeit 72 Monate, gebundener Sollzins <b>3,90 % p. a.</b>, <b>effektiver Jahreszins 4,20 %</b>, 72 monatliche Raten à 1.561,52 €, Gesamtbetrag 112.429,44 €.</p>
+    <p style="margin-top:12px">*Eff. Jahreszins ab 4,20 % bonitätsabhängig – abhängig von Bonität, Laufzeit und Objekt/Sicherheiten. Unverbindliche Information, kein verbindliches Angebot. Vermittlung über BaFin-lizenzierte Partnerinstitute.</p>
   </div>
-</section>
+</div></section>
 
-<footer>
-  <div class="wrap">
-    <div class="fgrid">
-      <div>
-        <div class="logo" style="color:#fff;margin-bottom:12px"><span class="mark">ALD</span> ALD Leasefinanz</div>
-        <p style="max-width:360px">Bankenunabhängiger Partner für Leasing und Finanzierung in Deutschland. BaFin-lizenziert gemäß § 32 KWG.</p>
-        <p style="margin-top:12px"><b style="color:#fff">Anschrift:</b> [Straße, PLZ Ort einsetzen]<br><b style="color:#fff">Telefon:</b> [Telefonnummer]<br><b style="color:#fff">E-Mail:</b> info@ald-leasefinanz.com.de</p>
-      </div>
-      <div>
-        <h4>Leistungen</h4>
-        <a href="#leistungen">Auto- &amp; Fuhrpark-Leasing</a>
-        <a href="#leistungen">Maschinen-Leasing</a>
-        <a href="#leistungen">Factoring</a>
-        <a href="#leistungen">Firmenkredit</a>
-      </div>
-      <div>
-        <h4>Rechtliches</h4>
-        <a href="impressum.html">Impressum</a>
-        <a href="datenschutz.html">Datenschutzerklärung</a>
-        <a href="agb.html">AGB</a>
-      </div>
-    </div>
-    <div class="copy">© 2026 ALD Leasefinanz · [Straße, PLZ Ort einsetzen] · BaFin-lizenziert (§ 32 KWG), Reg.-Nr. [einsetzen] · Aufsichtsbehörde: Bundesanstalt für Finanzdienstleistungsaufsicht (BaFin), Marie-Curie-Str. 24–28, 60439 Frankfurt am Main.</div>
+<!-- kontakt -->
+<section id="kontakt" class="contact"><div class="wrap"><div class="cgrid">
+  <div class="cinfo">
+    <span class="lead-tag">Kontakt</span>
+    <h2>Sprechen wir über Ihr Vorhaben</h2>
+    <p>Schildern Sie uns in zwei Minuten Ihren Bedarf. Sie erhalten Ihre kostenlose Erstindikation innerhalb von 48 Stunden – ohne Auswirkung auf Ihren SCHUFA-Score.</p>
+    <div class="cline"><i class="fa-solid fa-phone"></i><div><b>[Telefonnummer einsetzen]</b><small>Mo–Fr, 9–18 Uhr</small></div></div>
+    <div class="cline"><i class="fa-solid fa-envelope"></i><div><b>info@ald-leasefinanz.com.de</b><small>Antwort am selben Werktag</small></div></div>
+    <div class="cline"><i class="fa-solid fa-location-dot"></i><div><b>[Straße, PLZ Ort einsetzen]</b><small>Deutschland</small></div></div>
   </div>
-</footer>
+  <form onsubmit="alert('Vielen Dank! Wir melden uns innerhalb von 48 Stunden.');return false;">
+    <label>Welche Lösung interessiert Sie?</label>
+    <select required><option value="">Bitte wählen</option><option>Fahrzeug-/Fuhrpark-Leasing</option><option>Maschinen-/Anlagen-Leasing</option><option>IT-/Equipment-Leasing</option><option>Factoring</option><option>Firmenkredit</option><option>Sale-and-lease-back</option></select>
+    <label>Finanzierungsvolumen</label>
+    <select required><option value="">Bitte wählen</option><option>bis 50.000 €</option><option>50.000 – 250.000 €</option><option>250.000 – 1 Mio. €</option><option>über 1 Mio. €</option></select>
+    <label>Name</label>
+    <input type="text" required placeholder="Vor- und Nachname">
+    <label>E-Mail</label>
+    <input type="email" required placeholder="name@firma.de">
+    <label>Telefon</label>
+    <input type="tel" required placeholder="+49 ...">
+    <button class="cta" type="submit"><i class="fa-solid fa-paper-plane"></i> Kostenlose Erstindikation anfordern</button>
+    <p class="fineprint">Mit dem Absenden stimmen Sie der Verarbeitung Ihrer Daten gemäß unserer <a href="datenschutz.html">Datenschutzerklärung</a> zu.</p>
+  </form>
+</div></div></section>
+
+<!-- bafin -->
+<div class="bafin"><div class="wrap">
+  <span class="chip">BaFin · § 32 KWG</span>
+  <span>ALD Leasefinanz ist als Finanzdienstleistungsinstitut (Leasing/Factoring) zugelassen und untersteht der Aufsicht der Bundesanstalt für Finanzdienstleistungsaufsicht (BaFin), Registernummer <b style="color:var(--txt)">[BaFin-Reg.-Nr. einsetzen]</b>. Anbieter: <b style="color:var(--txt)">[Straße, PLZ Ort einsetzen]</b>.</span>
+</div></div>
+
+<!-- footer -->
+<footer><div class="wrap">
+  <div class="fgrid">
+    <div>
+      <a class="brand" href="/" style="margin-bottom:14px"><span class="logo">ALD</span> Leasefinanz</a>
+      <p style="max-width:340px">Bankenunabhängiger Partner für Leasing und Finanzierung in Deutschland. BaFin-lizenziert nach § 32 KWG.</p>
+    </div>
+    <div>
+      <h4>Lösungen</h4>
+      <a href="#finanzieren">Fuhrpark-Leasing</a>
+      <a href="#finanzieren">Maschinen-Leasing</a>
+      <a href="#finanzieren">Factoring</a>
+      <a href="#finanzieren">Firmenkredit</a>
+    </div>
+    <div>
+      <h4>Rechtliches</h4>
+      <a href="impressum.html">Impressum</a>
+      <a href="datenschutz.html">Datenschutzerklärung</a>
+      <a href="agb.html">AGB</a>
+    </div>
+  </div>
+  <div class="fbtm">© 2026 ALD Leasefinanz · [Straße, PLZ Ort einsetzen] · BaFin-lizenziert (§ 32 KWG), Reg.-Nr. [einsetzen] · Aufsicht: Bundesanstalt für Finanzdienstleistungsaufsicht (BaFin), Marie-Curie-Str. 24–28, 60439 Frankfurt am Main.</div>
+</div></footer>
 
 </body>
 </html>
